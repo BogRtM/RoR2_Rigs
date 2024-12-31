@@ -1,4 +1,9 @@
 # context.area: VIEW_3D
+
+#PLEASE READ THE README FOR A GUIDE ON HOW TO USE THIS RIG
+#https://github.com/BogRtM/RoR2_Rigs
+#Contact @bog_rtm on Discord for questions
+
 import bpy
 
 rig_id = "ENGI_RIG_ID"
