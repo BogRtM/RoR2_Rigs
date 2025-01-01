@@ -1,7 +1,7 @@
 # RoR2 Rigs
 Blender rigs for vanilla RoR2 survivors, intended to be used for adding custom survivor animations with [R2API.Animations](https://thunderstore.io/package/RiskofThunder/R2API_Animations/).
 
-### This is a WIP project and in its current version only contains a rig for Engi. I am still in the process of figuring out how all this works, and will rely on your feedback to make sure everything runs smoothly.
+### This is a WIP project. I am still in the process of figuring out how all this works, and will rely on your feedback to make sure everything runs smoothly.
 
 ### There appears to be an issue with Engi's rig that causes custom animations to reduce the scale of the model in-game. I have yet to figure out the best fix for this, but thus far it appears that scaling the CTRL-ROOT bone to 1.14x for the animation is the best solution.
 
@@ -9,7 +9,7 @@ Please contact @bog_rtm on Discord with feedback or issues.
 
 ---
 
-# How to use this rig
+# How to use these rigs
 
 ## IMPORTANT
 - **If a bone or bone collection has a prefix of "DEF", "TGT", or "MCH", do not touch it. Animate only with bones that have the "CTRL" prefix, and the PROPERTIES bone.**
@@ -21,7 +21,7 @@ Please contact @bog_rtm on Discord with feedback or issues.
 - **Do not change the name of the armature. It must match the name of the survivor's armature in-game.**
 
 ## Rig UI
-When opening the Blend file, execute the attached `Engi_Rig_UI.py` file in the text editor in order to create a rig UI panel in the sidebar. This will allow you to easily toggle the visibility of bone collections, control custom properties, and use the FK/IK snapping operations.
+When opening the Blend file, execute the attached Rig_UI.py file in the text editor in order to create a rig UI panel in the sidebar. This will allow you to easily toggle the visibility of bone collections, control custom properties, and use the FK/IK snapping operations.
 
 ![image](https://github.com/user-attachments/assets/c77e7a6d-7ac6-4c26-98ea-692bcb8cfc85)
 
