@@ -1,4 +1,13 @@
 # context.area: VIEW_3D
+
+#PLEASE READ THE README FOR A GUIDE ON HOW TO USE THIS RIG
+#https://github.com/BogRtM/RoR2_Rigs
+#Contact @bog_rtm on Discord for questions
+
+#PLEASE READ THE README FOR A GUIDE ON HOW TO USE THIS RIG
+#https://github.com/BogRtM/RoR2_Rigs
+#Contact @bog_rtm on Discord for questions
+
 import bpy
 
 rig_id = "LOADER_RIG_ID"
@@ -52,8 +61,10 @@ class LOADER_PT_Visibility(bpy.types.Panel):
         row.prop(boneCollections["CTRL-Head"], 'is_visible', toggle=True, text="HEAD")
         row = column.row(align=True)
         row.prop(boneCollections["CTRL-Torso"], 'is_visible', toggle=True, text="TORSO")
-        row = column.row(align=True)
+        row = row.split(align=True)
         row.prop(boneCollections["CTRL-Torso Tweak"], 'is_visible', toggle=True, text="TORSO TWEAK")
+        row = column.row(align=True)
+        row.prop(boneCollections["CTRL-Shoulders"], 'is_visible', toggle=True, text="SHOULDERS")
 
         column.separator(factor = 1.5, type='LINE')
         
@@ -454,6 +465,12 @@ class LOADER_PT_ArmProperties(bpy.types.Panel):
         row.label(text = "Arm.L Hold Handle")
         row.split(align= True)
         row.prop(bone, '["Arm.L Hold Handle"]', text = "", slider=True)
+        
+        row = column.row(align=True)
+        row.label(text = "Arm.L IK Stretch")
+        row.split(align= True)
+        row.prop(bone, '["Arm.L IK Stretch"]', text = "", slider=True)
+        
 
         box = layout.box()
         column = box.column()
@@ -472,6 +489,11 @@ class LOADER_PT_ArmProperties(bpy.types.Panel):
         row.label(text = "Arm.R Hold Handle")
         row.split(align= True)
         row.prop(bone, '["Arm.R Hold Handle"]', text = "", slider=True)
+        
+        row = column.row(align=True)
+        row.label(text = "Arm.R IK Stretch")
+        row.split(align= True)
+        row.prop(bone, '["Arm.R IK Stretch"]', text = "", slider=True)
 
 class LOADER_PT_LegProperties(bpy.types.Panel):
     bl_label = "Leg Properties"
@@ -540,5 +562,5 @@ register, unregister = bpy.utils.register_classes_factory(panels)
 #def unregister():
 #    bpy.utils.unregister_class(LOADER_PT_RigUI)
 
-if __name__ == "<run_path>":
+if __name__ == "__main__":
    register()
