@@ -38,9 +38,9 @@ class CHEF_PT_Visibility(bpy.types.Panel):
     def draw(self, context):
         layout = self.layout
 
-        boneCollections = bpy.data.armatures['ChefArmature'].collections_all
+        boneCollections = bpy.data.armatures['root'].collections_all
 
-        testCol = bpy.data.armatures['ChefArmature'].collections
+        testCol = bpy.data.armatures['root'].collections
 
         column = layout.column()
 
@@ -115,7 +115,7 @@ def FK_IK(side:str):
     ctrlFKPrefix = 'CTRL-FK-'
     mchPrefix = 'MCH-SNAP-'
 
-    rigPose = bpy.data.objects['ChefArmature'].pose
+    rigPose = bpy.data.objects['root'].pose
     bpy.ops.pose.select_all(action='DESELECT')
 
     fkBone = rigPose.bones.get(ctrlFKPrefix+'Arm.'+side)
@@ -147,7 +147,7 @@ def IK_FK(side:str):
     ctrlIKPrefix = 'CTRL-IK-'
     ctrlFKPrefix = 'CTRL-FK-'
 
-    rigPose = bpy.data.objects['ChefArmature'].pose
+    rigPose = bpy.data.objects['root'].pose
     bpy.ops.pose.select_all(action='DESELECT')
 
     targetFKBone = rigPose.bones.get(ctrlFKPrefix + "Arm." + side)
@@ -228,7 +228,7 @@ class CHEF_PT_HeadProperties(bpy.types.Panel):
         box = layout.box()
         column = box.column()
 
-        bone = bpy.data.objects['ChefArmature'].pose.bones['PROPERTIES']
+        bone = bpy.data.objects['root'].pose.bones['PROPERTIES']
 
         row = column.row(align=True)
         row.label(text = "Head Target")
@@ -249,7 +249,7 @@ class CHEF_PT_ArmProperties(bpy.types.Panel):
         box = layout.box()
         column = box.column()
 
-        bone = bpy.data.objects['ChefArmature'].pose.bones['PROPERTIES']
+        bone = bpy.data.objects['root'].pose.bones['PROPERTIES']
 
         row = column.row(align=True)
         row.label(text = "Arm.L FK/IK")
