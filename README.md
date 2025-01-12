@@ -20,6 +20,8 @@ Please contact @bog_rtm on Discord with feedback or issues.
 
 - **Do not change the name of the armature. It must match the name of the survivor's armature in-game.**
 
+- **Please check the attached rig ui.py file for each survivor; some of them may have extra information regarding the rig.**
+
 ## Rig UI
 When opening the Blend file, execute the attached Rig_UI.py file in the text editor in order to create a rig UI panel in the sidebar. This will allow you to easily toggle the visibility of bone collections, control custom properties, and use the FK/IK snapping operations.
 
