@@ -22,6 +22,8 @@ Please contact @bog_rtm on Discord with feedback or issues.
 
 - **Please check the attached rig ui.py file for each survivor; some of them may have extra information regarding the rig.**
 
+- **Before you begin making elaborate complex animations right off the bat, please test out a couple of simple animations first. The rigs have not had much in-game testing, so if you identify any issues, please contact me so I can make adjustments.**
+
 ## Rig UI
 When opening the Blend file, execute the attached Rig_UI.py file in the text editor in order to create a rig UI panel in the sidebar. This will allow you to easily toggle the visibility of bone collections, control custom properties, and use the FK/IK snapping operations.
 
