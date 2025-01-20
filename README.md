@@ -22,6 +22,8 @@ Please contact @bog_rtm on Discord with feedback or issues.
 
 - **Please check the attached rig ui.py file for each survivor; some of them may have extra information regarding the rig.**
 
+- **Before you begin making elaborate complex animations right off the bat, please test out a couple of simple animations first. The rigs have not had much in-game testing, so if you identify any issues, please contact me so I can make adjustments.**
+
 ## Rig UI
 When opening the Blend file, execute the attached Rig_UI.py file in the text editor in order to create a rig UI panel in the sidebar. This will allow you to easily toggle the visibility of bone collections, control custom properties, and use the FK/IK snapping operations.
 
@@ -34,15 +36,18 @@ When opening the Blend file, execute the attached Rig_UI.py file in the text edi
 Custom properties allow you to control various rig behaviors. In order to use them in your animations, you must create a key for the property in the armature action, and create new keys at any frame you adjust that property. I have keyed all custom properties at the start of the Keying action.
 
 - FK/IK: Switch between FK(0) and IK(1)
-- Follow: Controls the amount of rotational influence the associated limb will inherit from its parent. This mostly affects the FK limbs, but in certain cases (such as Engi's cannon IK controllers) the location will be affected as well.
+- Follow: Controls the amount of rotational influence the associated limb will inherit from its parent. This mostly affects the FK limbs, but in certain cases the location will be affected as well.
 - IK Stretch: Turns IK stretching on(1) or off(0) for the associated limb.
 - Target: Causes a certain bone or joint to aim at a target controller. In Engi's case, the cannons can be made to aim at the CTRL-CannonTarget bone in the Cannon Tweaks bone collection.
+- Parent: Causes the associated controller bone to be "parented" to a certain other bone depending on the value. Check each individual file for details.
 
 ## Snapping Utilities
 ![image](https://github.com/user-attachments/assets/85082812-84bb-4550-b083-2f138c31d076)
 
 These buttons allow you to snap the FK and IK controllers to one another for the associated limb. Doing so will switch the limb to the kinematics type being snapped (ie, pressing the `Arm.R IK > FK` button will cause the right arm's IK bones to snap to its FK bones,
 and will switch the right arm to IK). This does **not** create a keyframe in your current action, so please be aware of this.
+
+This will not be 100% perfect when snapping IK > FK as I have not locked the axes for the IK bones. This was done in order to recreate Hopoo's idle animations.
 
 ## Export Settings
 
