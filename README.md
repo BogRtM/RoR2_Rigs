@@ -27,6 +27,8 @@ Please contact @bog_rtm on Discord with feedback or issues.
 ## Rig UI
 When opening the Blend file, execute the attached Rig_UI.py file in the text editor in order to create a rig UI panel in the sidebar. This will allow you to easily toggle the visibility of bone collections, control custom properties, and use the FK/IK snapping operations.
 
+This has been set up to execute automatically, so please allow scripts to run on Blender startup.
+
 ![image](https://github.com/user-attachments/assets/c77e7a6d-7ac6-4c26-98ea-692bcb8cfc85)
 
 ## Custom Properties
