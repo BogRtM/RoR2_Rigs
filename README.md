@@ -3,8 +3,6 @@ Blender rigs for vanilla RoR2 survivors, intended to be used for adding custom s
 
 ### This is a WIP project. I am still in the process of figuring out how all this works, and will rely on your feedback to make sure everything runs smoothly.
 
-### There appears to be an issue with Engi's rig that causes custom animations to reduce the scale of the model in-game. I have yet to figure out the best fix for this, but thus far it appears that scaling the CTRL-ROOT bone to 1.14x for the animation is the best solution.
-
 Please contact @bog_rtm on Discord with feedback or issues.
 
 ---
@@ -16,13 +14,15 @@ Please contact @bog_rtm on Discord with feedback or issues.
 
 - **Make sure to check the Only Deform Bones checkbox under the Armature section when exporting as an FBX.**
 
-- **I highly suggest using the Keying action as the starting point for your animations. I have created the necessary transform channel keys for all relevant CTRL bones and custom properties. If a transform channel you need is not keyed, you can do so manually, but be warned that touching the scale of most bones other than the CTRL-Root bone may cause jank.**
+- **I highly suggest using the Keying or Idle actions as the starting point for your animations. I have created the necessary transform channel keys for all relevant CTRL bones and custom properties. If a transform channel you need is not keyed, you can do so manually, but be warned that touching the scale of most bones other than the CTRL-Root bone may cause jank.**
 
 - **Do not change the name of the armature. It must match the name of the survivor's armature in-game.**
 
 - **Please check the attached rig ui.py file for each survivor; some of them may have extra information regarding the rig.**
 
 - **Before you begin making elaborate complex animations right off the bat, please test out a couple of simple animations first. The rigs have not had much in-game testing, so if you identify any issues, please contact me so I can make adjustments.**
+
+- **The textures I use in the blend files are not always the same as those used in-game. Please do not use them for anything.**
 
 ## Rig UI
 When opening the Blend file, execute the attached Rig_UI.py file in the text editor in order to create a rig UI panel in the sidebar. This will allow you to easily toggle the visibility of bone collections, control custom properties, and use the FK/IK snapping operations.
