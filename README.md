@@ -10,13 +10,13 @@ Please contact @bog_rtm on Discord with feedback or issues.
 # How to use these rigs
 
 ## IMPORTANT
+- **Do not change the name of the armature. It must match the name of the survivor's armature in-game.**
+
 - **If a bone or bone collection has a prefix of "DEF", "TGT", or "MCH", do not touch it. Animate only with bones that have the "CTRL" prefix, and the PROPERTIES bone.**
 
 - **Make sure to check the Only Deform Bones checkbox under the Armature section when exporting as an FBX.**
 
 - **I highly suggest using the Keying or Idle actions as the starting point for your animations. I have created the necessary transform channel keys for all relevant CTRL bones and custom properties. If a transform channel you need is not keyed, you can do so manually, but be warned that touching the scale of most bones other than the CTRL-Root bone may cause jank.**
-
-- **Do not change the name of the armature. It must match the name of the survivor's armature in-game.**
 
 - **Please check the attached rig ui.py file for each survivor; some of them may have extra information regarding the rig.**
 
@@ -36,12 +36,6 @@ This has been set up to execute automatically, so please allow scripts to run on
 ![image](https://github.com/user-attachments/assets/44e5a5f0-8cdb-46c4-87cd-da695063fea3)
 
 Custom properties allow you to control various rig behaviors. In order to use them in your animations, you must create a key for the property in the armature action, and create new keys at any frame you adjust that property. I have keyed all custom properties at the start of the Keying action.
-
-- FK/IK: Switch between FK(0) and IK(1)
-- Follow: Controls the amount of rotational influence the associated limb will inherit from its parent. This mostly affects the FK limbs, but in certain cases the location will be affected as well.
-- IK Stretch: Turns IK stretching on(1) or off(0) for the associated limb.
-- Target: Causes a certain bone or joint to aim at a target controller. In Engi's case, the cannons can be made to aim at the CTRL-CannonTarget bone in the Cannon Tweaks bone collection.
-- Parent: Causes the associated controller bone to be "parented" to a certain other bone depending on the value. Check each individual file for details.
 
 ## Snapping Utilities
 ![image](https://github.com/user-attachments/assets/85082812-84bb-4550-b083-2f138c31d076)
