@@ -1,8 +1,6 @@
 # RoR2 Rigs
 Blender rigs for vanilla RoR2 survivors, intended to be used for adding custom survivor animations with [R2API.Animations](https://thunderstore.io/package/RiskofThunder/R2API_Animations/).
 
-### This is a WIP project. I am still in the process of figuring out how all this works, and will rely on your feedback to make sure everything runs smoothly.
-
 Please contact @bog_rtm on Discord with feedback or issues.
 
 ---
